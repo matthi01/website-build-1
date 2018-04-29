@@ -140,7 +140,7 @@
 
 // SUB-HEADER
 .sub-header {
-    border-bottom: 1px solid var(--color-grey-light-2);
+    border-bottom: var(--line);
 
     &__heading {
         font-size: 2.25rem;
@@ -149,4 +149,47 @@
         letter-spacing: 1px;
         padding: 1.5rem 3rem;
     }
+}
+
+
+// PARAGRAPH
+.paragraph:not(:last-of-type) {
+    margin-bottom: 2rem;
+}
+
+
+// LIST
+.list {
+    list-style: none;
+    margin: 3rem 0;
+    padding: 3rem 0;
+    border-top: var(--line);
+    border-bottom: var(--line);
+
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        flex: 0 0 50%;
+    }
+
+    &__item::before {
+        content: "";
+        display: inline-block;
+        height: 1rem;
+        width: 1rem;
+        margin-right: .7rem;
+
+        // background-image: url(../img/chevron-thin-right.svg);
+        // background-size: cover;
+
+        //masks
+        background-color: var(--color-primary);
+        -webkit-mask-image: url(../img/chevron-thin-right.svg);
+        -webkit-mask-size: cover;
+    }
+}
+
+.list-summary {
+
 }
