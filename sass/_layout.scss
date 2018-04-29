@@ -28,8 +28,6 @@
 .main-view {
     background-color: #fff;
     flex: 1;
-    
-    height: 80rem;
 }
 
 .detail {
@@ -49,6 +47,8 @@
 }
 
 .description-small {
-    background-color: greenyellow;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
